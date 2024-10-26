@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find AI Extension</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="find-ai-extension">
+    <header class="sidebar-header">
+      <h1>Find AI</h1>
+      <button class="close-btn">&times;</button>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for a product..." />
+      <button class="search-btn" onclick="fetchProductData()">Search</button>
+    </div>
+
+    <div class="filters">
+      <label>Price Range:</label>
+      <input type="range" id="price-range" min="0" max="500" step="10" />
+      <label>Quality:</label>
+      <select id="quality-select">
+        <option value="best">Best</option>
+        <option value="average">Average</option>
+        <option value="low">Low</option>
+      </select>
+    </div>
+
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Price</th>
+            <th>Quality</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody id="product-table-body">
+          <!-- Data will be inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
